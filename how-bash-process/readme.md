@@ -46,6 +46,14 @@ mkdir -p path/{ucb/{ex,edit},lib/{ext,abc}}  # make directories .. <br>path/lib/
 
 ### b) Intermidiate Expansion :
 
+In this step, different types expansions & substitutions occur. Namely, <br>
+i) Tilde Expansion : ~ converts to $HOME. For example, ~arnob/Documents converts to /home/arnob/Documents. <br>
+
+ii) Parameter expansion : Discussed in parameter.bash & paramter2.bash files. <br>
+iii) Arithmatic expansion : <br>
+iv) Command Substitution : <br>
+v) Process substitution :
+
 ### c) Word splitting :
 
 ### d) Globbing :

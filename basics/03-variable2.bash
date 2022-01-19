@@ -18,11 +18,14 @@ echo ${var^}  # 1st letter to uppercase
 echo ${var^^} # all letters to uppercase
 echo ${#var} # length
 
+echo "*****"
 echo ${var::5} # first 5 characters
 echo ${var:4} # all excluding first 4 characters
 echo ${var: -3} # last 3 characters,  space before minus is required.
-echo ${var:2:5} # staring from 2nd letter, cut a srring of length 5.
-
+echo ${var:2:5} # staring from 2nd letter, cut a string of length 5.
+echo ${var:2: -3} # strating from 2nd letter, not including last 3 letter
+echo ${var: -4:3} # takes last 4 letters, & then take first 3 of that
+echo ${var: -4: -3} # takes last 4 letters, & then skip last 3 of that
 
 echo "-------------------------"
 
