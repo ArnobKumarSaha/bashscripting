@@ -1,0 +1,7 @@
+#!/bin/bash
+
+IFS="."
+name="arnob saha"
+out="out.txt"
+
+echo "$name" > "~/$out"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+readarray -t urls < urls.txt
+
+for url in "${urls[@]}"; do
+	echo $url
+	name=$(echo $url | cut -d "." -f 2)
+	curl -I $url > "fetched/$name.txt"
+done

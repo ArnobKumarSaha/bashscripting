@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Idea : read every file name from a folder ($1)
+	# check if it is a pdf or not 
+	# if pdf, then copy it to a specific location
+
+while read item;  do
+	echo "$item"
+	#out=$(file my_folder/"$item")
+
+	file "$1"/"$item" | grep -q "PDF"
+
+	if [ $? -eq 0 ]; then
+		echo "if is true"
+		cp "$1"/"$item" c/"$item"
+	fi
+done < <(ls "$1")

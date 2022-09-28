@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mkdir att
+touch att/{1..10}.txt

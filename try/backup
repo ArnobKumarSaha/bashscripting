@@ -1,0 +1,10 @@
+#!/bin/bash
+
+user=$(echo $USER)
+
+echo "Hello, ${user^}"
+echo "I will now back up your home directory, $HOME/Desktop/hello/"
+
+currentdir=$(pwd)
+tar -cf "$currentdir/my_backup_$(date +%d-%m-%Y_%H-%M-%S).tar" "$HOME/Desktop/hello/" 2>/dev/null
+

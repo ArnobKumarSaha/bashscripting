@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while getopts "m:s:" opt; do
+case $opt in
+	m) min=$OPTARG ;;
+	s) sec=$OPTARG ;;
+	*) echo "INVALID"
+esac
+done
+
+echo "minute is $min and second is $sec"
+
+total_seconds=$(( $min * 60 + $sec ))
+
+while [ $total_seconds -gt 0 ]; do
+	echo "remaining seconds : $total_seconds"
+	total_seconds=$(( $total_seconds - 1 ))
+	sleep 1s
+done

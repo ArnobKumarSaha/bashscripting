@@ -1,0 +1,26 @@
+#!/bin/bash
+
+DIR_PATH=~/Desktop/performance.log
+
+date > "$DIR_PATH"
+
+ping -c 1 google.com &> /dev/null 
+
+if [ "$?" ]; then
+ echo "Internet: Connected" >> "$DIR_PATH"
+else
+ echo "Internet: Disconnected" >>  "$DIR_PATH"
+fi
+
+
+{ echo "RAM Usage :"; free -h | grep "Mem"; } >>  "$DIR_PATH"
+
+
+echo "Swap Usage :" >>  "$DIR_PATH"
+free -h | grep "Swap" >>  "$DIR_PATH"
+
+
+echo "Disk Usage :" >>  "$DIR_PATH"
+df -h >>  "$DIR_PATH"
+echo ""
+

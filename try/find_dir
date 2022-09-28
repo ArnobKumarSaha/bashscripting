@@ -1,0 +1,13 @@
+#!/bin/bash
+
+CHK=$(echo "${BASH_SOURCE[@]}")
+echo "array = ${CHK}"
+
+SRC_FILE=$(echo "${BASH_SOURCE[0]}")
+echo "${SRC_FILE}, \$0 = ${0}"
+
+TMP="$( dirname ${SRC_FILE} )"
+echo "$TMP"
+DIR="$( cd ${TMP} && pwd )"
+
+echo ${DIR}
