@@ -26,3 +26,16 @@ grep "your-search" some-folder/*  # to use grep in a whole directory. Here * is 
 
 -P # for perl-compatible-regular-expression
 grep -P "\d{3}-\d{2}" file.txt # searches 3 digits + a dash + 2 digits in file.txt
+
+tar --help | grep -w '\--directory'  # exact match (including special character)
+tar --help | grep -w '\-x\|\-z\|\-f' # same as above , but with OR
+
+-e -E <regex>
+-v <your-search> # Simulate the NOT operation
+-r # Recursive search in a folder
+
+export GREP_OPTIONS='--color=auto' GREP_COLOR='100;8'  # To modify the grep output options
+
+grep -o "hi.*bye" filename # If you want to show only the matched part, not the full line
+
+
